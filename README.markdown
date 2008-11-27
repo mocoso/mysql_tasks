@@ -32,7 +32,7 @@ Install the plugin
 
 And add the following line to your deploy.rb file
 
-    load 'vendor/plugins/mysql_tasks/lib/mysql_deploy
+    load 'vendor/plugins/mysql_tasks/lib/mysql_deploy'
 
 Check everything has installed correctly with
 
