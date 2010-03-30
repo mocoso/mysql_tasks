@@ -18,7 +18,8 @@ namespace :mysql do
   task :refresh_from_production do
     require_environment('development')
     `cap mysql:db_runner`
-    `rake mysql:unzip_production_dump mysql:load_from_production_dump --trace`
+    Rake::Task['mysql:unzip_production_dump'].invoke
+    Rake::Task['mysql:load_from_production_dump'].invoke
   end
 
   desc "Unzips production data downloaded to your tmp directory"
