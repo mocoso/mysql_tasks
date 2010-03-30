@@ -24,13 +24,16 @@ namespace :mysql do
 
   desc "Unzips production data downloaded to your tmp directory"
   task :unzip_production_dump do
+    puts 'Unzipping from production dump'
     `gunzip tmp/production_data.sql.gz`
   end
 
   desc "Loads the production data downloaded into tmp/production_data.sql into your local development database"
   task :load_from_production_dump do
     require_environment('development')
+    puts 'Loading from production dump'
     `#{sh_mysql(database_config)} < tmp/production_data.sql`
+    puts 'Loaded from production dump'
   end
 
   def require_environment(env)
