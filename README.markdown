@@ -42,4 +42,4 @@ Which should list your new rake and cap mysl tasks
 
 
 
-Copyright (c) 2008 Joel Chippindale, released under the MIT license
+Copyright (c) 2010 Joel Chippindale, released under the MIT license
